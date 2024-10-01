@@ -85,23 +85,23 @@ module "securityhub" {
 ## Example (Organization Level with LOCAL configuration)
 ```hcl
 module "securityhub" {
-source = "rhythmictech/securityhub/aws"
-enable_organization_config = true
-admin_account_id = "123456789012"
-configuration_type_central = false
-auto_enable_new_accounts = true
-auto_enable_standards_for_new_accounts = true
-enable_default_standards = true
-control_finding_generator = "SECURITY_CONTROL"
-auto_enable_controls = true
-enable_cis_standard = true
-enable_pci_dss_standard = true
-enable_aws_foundational_standard = true
-product_subscriptions = [
-"aws/guardduty",
-"aws/inspector",
-"aws/macie"
-]
+  source                                 = "rhythmictech/securityhub/aws"
+  enable_organization_config             = true
+  admin_account_id                       = "123456789012"
+  configuration_type_central             = false
+  auto_enable_new_accounts               = true
+  auto_enable_standards_for_new_accounts = true
+  enable_default_standards               = true
+  control_finding_generator              = "SECURITY_CONTROL"
+  auto_enable_controls                   = true
+  enable_cis_standard                    = true
+  enable_pci_dss_standard                = true
+  enable_aws_foundational_standard       = true
+  product_subscriptions = [
+    "aws/guardduty",
+    "aws/inspector",
+    "aws/macie"
+  ]
 }
 ```
 
