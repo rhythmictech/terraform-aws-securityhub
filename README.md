@@ -24,18 +24,18 @@ This Terraform module configures AWS Security Hub for an AWS account or organiza
 ## Example (Account Level)
 ```hcl
 module "securityhub" {
-source = "rhythmictech/securityhub/aws"
-enable_default_standards = true
-control_finding_generator = "SECURITY_CONTROL"
-auto_enable_controls = true
-enable_cis_standard = true
-enable_pci_dss_standard = true
-enable_aws_foundational_standard = true
-product_subscriptions = [
-"aws/guardduty",
-"aws/inspector",
-"aws/macie"
-]
+  source                           = "rhythmictech/securityhub/aws"
+  enable_default_standards         = true
+  control_finding_generator        = "SECURITY_CONTROL"
+  auto_enable_controls             = true
+  enable_cis_standard              = true
+  enable_pci_dss_standard          = true
+  enable_aws_foundational_standard = true
+  product_subscriptions = [
+    "aws/guardduty",
+    "aws/inspector",
+    "aws/macie"
+  ]
 }
 ```
 
