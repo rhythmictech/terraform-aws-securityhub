@@ -202,8 +202,8 @@ variable "finding_aggregator_linking_mode" {
   type        = string
 
   validation {
-    condition     = contains(["ALL_REGIONS", "SPECIFIED_REGIONS", "ALL_REGIONS_EXCEPT_SPECIFIED"], var.finding_aggregator_linking_mode)
-    error_message = "Allowed values for finding_aggregator_linking_mode are \"ALL_REGIONS\" or \"ALL_REGIONS_EXCEPT_SPECIFIED\" or \"SPECIFIED_REGIONS\"."
+    condition     = contains(["ALL_REGIONS", "SPECIFIED_REGIONS", "ALL_REGIONS_EXCEPT_SPECIFIED", "NO_REGIONS"], var.finding_aggregator_linking_mode)
+    error_message = "Allowed values for finding_aggregator_linking_mode are \"ALL_REGIONS\", \"ALL_REGIONS_EXCEPT_SPECIFIED\", \"SPECIFIED_REGIONS\" or \"NO_REGIONS\"."
   }
 }
 
